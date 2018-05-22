@@ -20,7 +20,7 @@
 <?php
 $q = $_REQUEST['q'];
 
-$con = mysqli_connect('localhost','volnion_24825','Tomfolkers1','volnion_24825');
+$con = mysqli_connect('localhost','volnion_24825','*******','volnion_24825');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
