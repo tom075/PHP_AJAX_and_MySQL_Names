@@ -18,15 +18,15 @@
 <body>
 
 <?php
-$q = intval($_GET['q']);
+$q = $_REQUEST['q'];
 
 $con = mysqli_connect('localhost','volnion_24825','Tomfolkers1','volnion_24825');
 if (!$con) {
     die('Could not connect: ' . mysqli_error($con));
 }
 
-mysqli_select_db($con,"w3c_ajax_demo");
-$sql="SELECT * FROM w3c_ajax_demo WHERE id = '".$q."'";
+mysqli_select_db($con,"volnion_24825");
+$sql="SELECT * FROM w3c_ajax_demo WHERE FirstName LIKE '$q%' OR LastName LIKE '$q%'";
 $result = mysqli_query($con,$sql);
 
 echo "<table>
